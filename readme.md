@@ -3,7 +3,6 @@ CMS - CLassroom management system VTA is a center management system aimed at dig
 
 This is the official repository of the CMS - VTA project.
 
-!!!! IMPORTANT
 
 -----ROUTE CACHING-------
 
