@@ -17,3 +17,8 @@ All your routes should be created in the routes/routes.php file
 ## Important
 - DO NOT MODIFY ANY FILES IN THE http AND database DIRECTORIES
 - MAKE SURE TO MODIFY THE .env FILE BEFORE DEPLOYING
+
+## Getting Started
+- Import the db_latest.sql file in the /database folder into your MySql databse server
+- Make sure the database server is running
+- Run "php -S localhost:3000" to start the project
