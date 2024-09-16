@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+        .form-card-body{
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.267);
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .form-card-body .container {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            max-width: 500px;
+            background: #fff;
+            width: 500px;
+            padding: 25px 40px 10px 40px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transform: translate(-50%,-50%);
+        }
+
+        .form-card-body .container .text {
+            text-align: center;
+            font-size: 41px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .form-card-body .container form {
+            padding: 30px 0 0 0;
+        }
+
+        .form-card-body .container form .form-row {
+            display: flex;
+            margin: 15px 0;
+        }
+
+        .form-card-body form .form-row .input-data {
+            width: 100%;
+            height: 40px;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .form-card-body form .form-row .textarea {
+            height: 70px;
+        }
+
+        .input-data input,
+        .textarea textarea {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: none;
+            font-size: 17px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+        }
+
+        .input-data input:focus~label,
+        .textarea textarea:focus~label,
+        .input-data input:valid~label,
+        .textarea textarea:valid~label {
+            transform: translateY(-20px);
+            font-size: 14px;
+            color: #331110;
+        }
+
+        .textarea textarea {
+            resize: none;
+            padding-top: 10px;
+        }
+
+        .input-data label {
+            position: absolute;
+            pointer-events: none;
+            bottom: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .textarea label {
+            width: 100%;
+            bottom: 40px;
+            background: #fff;
+        }
+
+        .input-data .underline {
+            position: absolute;
+            bottom: 0;
+            height: 2px;
+            width: 100%;
+        }
+
+        .input-data .underline:before {
+            position: absolute;
+            content: "";
+            height: 2px;
+            width: 100%;
+            background: #992929;
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.3s ease;
+        }
+
+        .input-data input:focus~.underline:before,
+        .input-data input:valid~.underline:before,
+        .textarea textarea:focus~.underline:before,
+        .textarea textarea:valid~.underline:before {
+            transform: scale(1);
+        }
+
+
+        @media (max-width: 700px) {
+            .form-card-body .container{
+                width: 100%;
+            }
+
+            .form-card-body .container .text {
+                font-size: 30px;
+            }
+
+            .form-card-body .container form {
+                padding: 10px 0 0 0;
+            }
+
+            .form-card-body .container form .form-row {
+                display: block;
+                margin: 5px 0;
+            }
+
+            .form-card-body form .form-row .input-data{
+                height: 20px;
+            }
+
+            .form-card-body form .form-row .textarea {
+                height: 40px;
+            }
+        }
+
+        input[type=date]:required:invalid::-webkit-datetime-edit {
+            color: transparent;
+        }
+
+        input[type=date]:focus::-webkit-datetime-edit {
+            color: black !important;
+        }
+
+        /* Dropdown */
+
+        .custom-select {
+            position: relative;
+            width: 400px;
+            max-width: 100%;
+            font-size: 1.15rem;
+            color: #000;
+            margin-top: 3rem;
+        }
+
+        .select-button {
+            width: 100%;
+            font-size: 1.15rem;
+            background-color: #fff;
+            padding: 0.675em 1em;
+            border: 1px solid #ff1702;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .selected-value {
+            text-align: left;
+        }
+
+        .arrow {
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 6px solid #000;
+            transition: transform ease-in-out 0.3s;
+        }
+
+        .select-dropdown {
+            position: absolute;
+            list-style: none;
+            width: 100%;
+            z-index: 50;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+            border: 1px solid #caced1;
+            border-radius: 4px;
+            padding: 10px;
+            margin-top: 10px;
+            max-height: 200px;
+            overflow-y: auto;
+            transition: 0.5s ease;
+            transform: scaleY(0);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .select-dropdown:focus-within {
+            box-shadow: 0 10px 25px rgba(94, 108, 233, 0.6);
+        }
+
+        .select-dropdown li {
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .select-dropdown li label {
+            width: 100%;
+            padding: 8px 10px;
+            cursor: pointer;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .select-dropdown::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        .select-dropdown::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 25px;
+        }
+
+        .select-dropdown::-webkit-scrollbar-thumb {
+            background: #ff2020;
+            border-radius: 25px;
+        }
+
+        .select-dropdown li:hover,
+        .select-dropdown input:checked~label {
+            background-color: #f2f2f2;
+        }
+
+        .select-dropdown input:focus~label {
+            background-color: #dfdfdf;
+        }
+
+        .select-dropdown input[type="radio"] {
+            position: absolute;
+            left: 0;
+            opacity: 0;
+        }
+
+        /* interactivity */
+
+        .custom-select.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        .custom-select.active .select-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: scaleY(1);
+        }
+
+        /*=============Aesthetics =========================*/
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Dropdown */
+
+        .button {
+            border: none;
+            color: white;
+            padding: 8px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button3 {
+            background-color: white;
+            color: black;
+            border: 2px solid #b92828;
+        }
+
+        .button3:hover {
+            background-color: #b92828;
+            color: white;
+        }
+        #btn_Clear{
+            margin-left: 115px;
+            margin-right: 20px;
+        }
+        .lable{
+            font-size: small;
+        }

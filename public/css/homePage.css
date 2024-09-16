@@ -1,0 +1,98 @@
+/* navbar */
+.navbar_content{
+    margin-left: 250px;
+    font-weight: bold;
+}
+.logo{
+    width: 200px;
+}
+.navbartext{
+    font-weight: bold;
+    color: white !important;
+}
+#login button{
+    color: rgb(255, 255, 255) ;
+    border-color:  rgb(255, 255, 255);
+}
+.nationallogo{
+    width: 100px;
+}
+/* header */
+.head{
+    background-color: rgb(158, 40, 75);
+    color: white;
+    text-align: center;
+}
+.headr{
+    font-weight: bold;
+    font-size: 30px;
+}
+.centername{
+    font-size:20px;
+}
+.carousalimg{
+    height: 380px;
+}
+/* course head */
+.coures{
+    background-color: rgb(158, 40, 75);
+    border-left: 10.5px solid rgb(231, 158, 21);
+    color: white;
+    text-align: center;
+}
+.course_title{
+    font-size: 30px;
+    text-align: left;
+}
+/* carousel */
+.carouseltext{
+    background-color: rgba(231, 158, 21, 0.309);
+}
+/* footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footer-links li {
+    margin: 0 15px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+.vl {
+    border-left: 3px solid rgb(82, 80, 80);
+    height: 100%;
+}
+.footer_hr{
+    text-align: center;
+}
+.footer_content{
+    text-align: left;
+}
+.footer_content_head{
+    font-weight: bold;
+}
+.footer_link{
+    text-decoration: none;
+    color: white;
+}
+#zoom:hover {
+    transform: scale(1.1);
+}
+
+#zoom {
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="col-12 px-0 site-card">
+        <div class="card rounded-0 border-0 shadow">
+            <div class="card-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 d-flex align-items-center ps-0">
+                            <h4 class="fs-4 my-0">
+                                STUDENT DETAILS</h4>
+                        </div>
+                        <div class="col-12 px-0 ">
+                            <hr>
+                        </div>
+
+                        <div class="col-12 container-fluid px-0">
+                            <div class="row">
+                                <div class="col-lg-5 center">
+                                    <img src="<?php echo getenv('BASE_URL') ?>/{{ profile_img_url }}"
+                                        alt="Profile picture" class="proPic card-body shadow mt-3 ">
+                                </div>
+                                <div class="col-lg-7 p-4 pb-0 ">
+
+                                    <div class="row mb-3 ">
+                                        <div class="col-3">
+                                            <span class="bold">Name</span>
+                                        </div>
+                                        <div class="col-1">
+                                            :</div>
+                                        <div class="col-lg-8">
+                                            {{ initials }} {{ last_name }}
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-3">
+                                            <span class="bold">NIC</span>
+                                        </div>
+                                        <div class="col-1">
+                                            :</div>
+                                        <div class="col-lg-8">
+                                            {{ nic }}
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-3">
+                                            <span class="bold">Status</span>
+                                        </div>
+                                        <div class="col-1">
+                                            :</div>
+                                        <div class="col-sm-8">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    {{ student_status }}
+                                                </div>
+                                                <div class="col">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="" style="right:30px">
+                                                        <button class="sts-chng-btn border-0  rounded-1 text-nowrap"
+                                                            onclick="document.getElementById('id01').style.display='block'"
+                                                            style="width:auto;">Change
+                                                            Status
+                                                        </button>
+
+                                                        <!-- Add change status form -->
+                                                        <div id="id01" class="modal">
+                                                            <form class="modal-content animate">
+                                                                <span
+                                                                    onclick="document.getElementById('id01').style.display='none'"
+                                                                    class="close" title="Close Modal">&times;
+                                                                </span>
+                                                                <label for="uname">
+                                                                    <span class="text-nowrap bold">
+                                                                        <center>
+                                                                            Status
+                                                                        </center>
+                                                                    </span>
+                                                                </label>
+                                                                <div class="container">
+                                                                    <select id="status">
+                                                                        <option value="Active">
+                                                                            Active
+                                                                        </option>
+                                                                        <option value="Inactive">
+                                                                            Inactive
+                                                                        </option>
+                                                                        <option value="Dropout">
+                                                                            Dropout
+                                                                        </option>
+                                                                    </select>
+                                                                    <div id="dropout-reason"
+                                                                        class="dropout-status d-none">
+                                                                        <label for="">Dropout
+                                                                            Date
+                                                                        </label>
+                                                                        <input type="date">
+                                                                        <label for="">Reason
+                                                                        </label>
+                                                                        <input type="text">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="container" style="background-color:#f1f1f1">
+                                                                    <center>
+                                                                        <button class="changeFormBtn"
+                                                                            type="button">Update</button>
+                                                                        <button class="cancelbtn" type="button"
+                                                                            onclick="document.getElementById('id01').style.display='none'">
+                                                                            Cancel
+                                                                        </button>
+                                                                    </center>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <!-- end of the Status form -->
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-3">
+                                            <span class="bold">MIS</span>
+                                        </div>
+                                        <div class="col-1">
+                                            :</div>
+                                        <div class="col-sm-8">
+                                            {{ mis }}
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-3">
+                                            <span class="bold">Batch</span>
+                                        </div>
+                                        <div class="col-1">
+                                            :</div>
+                                        <div class="col-sm-8">
+                                            {{ batch_name }}
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Extra Details Section Start -->
+                        <div class="col-12 container-fluid" id="profile-content-container">
+                            <div class="row border rounded-1 ps-md-4 pt-2 my-2">
+                                <div class="col-12 col-md-4 mb-2">
+                                    <div><b>Date Of Birth</b></div>
+                                    <div>{{ dob }}</div>
+                                </div>
+                                <div class="col-12 col-md-4 mb-2">
+                                    <div><b>Gender</b></div>
+                                    <div>{{ gender }}</div>
+                                </div>
+                                <div class="col-12 col-md-4 mb-2">
+                                    <div><b>Address</b></div>
+                                    <div>
+                                        {{ address }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-12 pt-2 pb-1">
+                                    <b> Contact Info </b>
+                                </div>
+                                <div class="col-12 container-fluid border rounded-1">
+                                    <div class="row ps-md-4 pt-2">
+                                        <div class="col-12 col-md-4 mb-2">
+                                            <div><b>Mobile No</b></div>
+                                            <div>{{ mobile_no }}</div>
+                                        </div>
+                                        <div class="col-12 col-md-4 mb-2">
+                                            <div><b>Whatsapp No</b>
+                                            </div>
+                                            <div>{{ whatsapp_no }}</div>
+                                        </div>
+                                        <div class="col-12 col-md-4 mb-2">
+                                            <div><b>Landline</b></div>
+                                            <div>{{ landline_no }}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-12 container-fluid border rounded-1">
+                                    <div class="row ps-md-4 pt-2">
+                                        <div class="col-12 col-md-4 mb-2">
+                                            <div><b> Email</b></div>
+                                            <div>{{ email }}</div>
+                                        </div>
+                                        <div class="col-12 col-md-4 mb-2">
+                                            <div><b>Guardian Name</b>
+                                            </div>
+                                            <div>{{ guardian }}</div>
+                                        </div>
+                                        <div class="col col-md-4">
+                                            <b></b>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <div class="col-12 container-fluid border rounded-1">
+                                    <div class="row ps-md-4 pt-2">
+                                        <div class="col-12 col-md-4 mb-2">
+                                            <div><b>residence</b></div>
+                                            <div>{{ district }}</div>
+                                        </div>
+                                        <div class="col-12 col-md-4 mb-2">
+                                            <div><b>District</b></div>
+                                            <div>{{ district }}</div>
+                                        </div>
+                                        <div class="col-12 col-md-4 mb-2">
+                                            <div><b>Divitional Secretariant</b>
+                                            </div>
+                                            <div>{{ divitional_secretariant }}</div>
+                                        </div>
+                                        <div class="col-12 col-md-4 mb-2">
+                                            <div><b> Gramasewa Divition
+                                                </b></div>
+                                            <div>{{ grama_sewa_divition }}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container mt-4">
+                                    <div class="row text-nowrap " id="button-group">
+                                        <div class="col-sm mb-2 ">
+                                            <button class="btn">Additional
+                                                Student
+                                                Details</button>
+                                        </div>
+                                        <div class="col-sm mb-2 ">
+                                            <button class="btn">Attendance
+                                                Details</button>
+                                        </div>
+                                        <div class="col-sm mb-2 ">
+                                            <button class="btn">Assessment
+                                                Details</button>
+                                        </div>
+                                        <div class="col-sm">
+                                        </div>
+                                        <div class="col-sm">
+                                        </div>
+                                        <div class="col-sm">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

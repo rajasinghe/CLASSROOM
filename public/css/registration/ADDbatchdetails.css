@@ -1,0 +1,245 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.wrapper{ 
+    background: #ececec;
+    padding: 0 20px 0 20px;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.row{
+    width: 900px;
+    height: 550px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 5px 5px 10px 1px rgb(0,0,0,0.2);
+}
+.side-image{
+    background-image: url("../Images/addBatch/developer.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 10px 0 0 10px;
+    /* left: 20px; */
+
+}
+img{
+    width: 75px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+i{
+    font-weight: 400;
+    font-size: 15px;
+}
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    position: relative;
+}
+.input-box{
+    width: 330px;
+
+}
+.input-box header{
+    font-weight: 700;
+    text-align: center;
+    margin-bottom:45px  ;
+
+}
+.input-field{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 10px 0 10px;
+}
+
+.input{
+    height: 45px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    outline: none;
+    margin-bottom: 20px;
+    color: #40414a;
+
+}
+
+.input-box .input-field label{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-field .input:focus ~ label{
+    top: -10px;
+    font-size: 13px;
+}
+.input-field .input:valid ~ label{
+    top: -10px;
+    font-size: 13px;
+    color: #5d5076 ;
+}
+.input-field .input:focus , .input-field .input:valid{
+
+    border-bottom: 1px solid blue;
+}
+
+.submit{
+    border: none;
+    outline: none;
+    height: 45px;
+    background: #ececec;
+    border-radius: 5px;
+    transition: .4s;
+}
+.submit:hover{
+    background: rgba(37,95,156,0.9);
+    color: #fff;
+
+}
+
+/* Row click hover Start */
+.date{
+    margin-bottom: 5px;
+    margin-right: .5rem;
+    opacity: 0;
+    transition: opacity .2s ease-out;
+    cursor: pointer;
+    transition-delay: .3s;
+  }
+  .date:hover{
+    opacity: 1;
+    transition-delay: 0s;
+  }
+  /* Row click hover End */
+
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+/*   .container {
+    Center the container on the page 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+     Use a gradient background 
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+  }
+   */
+
+  .form {
+    /* Use a card-like style */
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: white;
+  }
+  
+  h1 {
+    /* Center the title */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #0072ff;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    /* Create a vertical layout for the inputs */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    /* Style the labels */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input {
+    /* Style the inputs */
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+  
+  button {
+    /* Style the button */
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background: #0072ff;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    /* Add some hover effect */
+    background: #0052cc;
+    transition: 0.3s;
+  }
+  
+  .btn{
+    background-color: #b7d841fb;
+  }
+
+  
+
+@media only screen and (max-width:768px ){
+    .side-image{
+        border-radius: 10px 10px 0 0;
+
+    }
+    img{
+        width: 75px;
+        position: absolute;
+        top: 20px;
+        left: 47px;
+    }
+
+    .text{
+        position: absolute;
+        top: 70%;
+        text-align: center;
+
+    }
+    .text p,i{
+        font-size: 17px;
+
+    }
+    .row{
+        max-width: 420px;
+        width: 100%;
+    }
+}

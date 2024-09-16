@@ -1,0 +1,45 @@
+h5.cardHead {
+    background-color: rgb(146, 66, 66);
+    color: aliceblue;
+}
+
+#formShadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#applicant_Scrolle::-webkit-scrollbar {
+    width: 10px;
+}
+
+#applicant_Scrolle::-webkit-scrollbar-thumb {
+    background-color: rgb(238, 9, 9);
+    height: 8px !important;
+}
+
+#applicant_Scrolle::-webkit-scrollbar-track {
+    background-color: rgb(255, 255, 255);
+}
+
+label.text {
+    color: brown;
+    font-weight: bold;
+}
+
+/* .input:focus {
+    outline: none !important;
+    border: 1px solid rgb(89, 12, 12);
+    box-shadow: 3px 3px #c94b4b;
+} */
+
+.site-form{
+    border: 0.4px solid rgba(0, 0, 0, 0.337);
+}
+
+div.border{
+    border: rgba(129, 128, 128, 0.524)  ;
+    border-width: 1px;
+    border-style: groove;
+}
+label.textB{
+    font-weight: bold;
+}

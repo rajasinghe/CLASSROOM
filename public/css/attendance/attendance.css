@@ -1,0 +1,62 @@
+#report-nav button{
+    color: rgb(212, 139, 3);
+    border-color: rgb(212, 139, 3);
+}
+
+#report-nav button.active{
+    background-color: rgb(231, 158, 21);
+    color: white;
+}
+
+.tablescorlbar::-webkit-scrollbar{
+    height: 8px !important;
+}
+
+.tablescorlbar::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+}
+
+.monthly-table th, .monthly-table td, .annual-table th, .annual-table td{
+    font-size: 13px;
+}
+
+.monthly-table .tiny, .annual-table .tiny{
+    font-size: 11px !important;
+}
+
+.good{
+    background-color: rgb(228, 115, 115) !important;
+}
+
+.average{
+    background-color: rgb(117, 196, 117) !important;
+}
+
+.bad{
+    background-color: rgb(43, 38, 38) !important;
+    color: white !important;
+}
+
+.percent.good{
+    background-color: rgb(224, 193, 92);
+}
+
+#attendance-section{
+    overflow-y: auto;
+    max-height: 500px;
+}
+
+.floating #attendance-section{
+    max-height: 370px;
+}
+
+#batchField{
+    padding-top:2px !important;
+    padding-bottom:2px !important;
+}
+
+@container contentcontainer (max-width: 1325px){
+    #monthly-report{
+        padding: 1.5rem 0.5rem !important;
+    }
+}

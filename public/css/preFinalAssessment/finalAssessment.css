@@ -1,0 +1,32 @@
+.add-date img{
+    width: 25px;
+    height: 25px;
+   
+}
+
+.add-date:hover img{
+    animation: growIcon 1.5s linear infinite;
+}
+
+@keyframes growIcon {
+    /* 0% {
+        transform: rotate3d(1, 1, 1, 0deg);
+    }
+
+    50% {
+        transform: rotate3d(1, 1, 1, 180deg);
+    }
+
+    100% {
+        transform: rotate3d(1, 1, 1, 360deg);
+    } */
+    0% {
+        transform: scale(0.9); /* Start rotation from 0 degrees */
+      }
+      50%{
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(0.9); /* Rotate to 360 degrees */
+      }
+}

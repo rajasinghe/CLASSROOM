@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap");
+
+:root {
+    --blue: #9ab3f5;
+    --purple: #9a1663;
+    --white: #ffffff;
+    --ash: #dfdfdf;
+    --shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+#report-nav a{
+    color: rgb(212, 139, 3);
+    border-color: rgb(212, 139, 3);
+}
+
+#report-nav a.active{
+    background-color: rgb(231, 158, 21);
+    color: white;
+}
+
+.dropdown-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#search-input{
+    background-color: var(--ash);
+}
+
+.all {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    /* background-color: var(--blue); */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    /* background-color: var(--white); */
+    background-color: var(--ash);
+}
+
+.dropdown {
+    position: relative;
+    width: 220px;
+    border-radius: 50px;
+    /* border: 1px solid var(--white); */
+    border: 1px solid var(--ash);
+    background-color: var(--purple);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    text-wrap: nowrap;
+}
+
+@media screen and(min-width:576px) {
+    /* .dropdown {
+        width: 800px;
+    } */
+}
+
+.dropdown-text {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white);
+    padding: 1rem 1rem;
+}
+
+.dropdown-list {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: max-content;
+    border-radius: 15px;
+    max-height: 0;
+    overflow: hidden;
+    background-color: var(--ash);
+    transition: max-height .5s;
+    z-index: 2;
+}
+
+#list.show {
+    max-height: 300px;
+}
+
+.dropdown-list-item {
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    cursor: pointer;
+    transition: margin-left .2s ease, color .2s ease;
+}
+
+.dropdown-list-item:hover {
+    margin-left: 0.5rem;
+    color: var(--purple);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+    width: 100%;
+    color: var(--purple);
+}
+
+.search-box input {
+    padding: 1rem;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--purple);
+    border: 0;
+    outline: 0;
+}
+
+.search-box i {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.search-box input::placeholder {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--purple);
+}
+
+#span{
+    max-width: 200px;
+    overflow-x: hidden;
+}

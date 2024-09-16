@@ -1,0 +1,21 @@
+
+        .dropdown-list-image {
+            position: relative;
+            height: 2.5rem;
+            width: 2.5rem;
+        }
+
+        .dropdown-list-image img {
+            height: 2.5rem;
+            width: 2.5rem;
+        }
+
+        .btn-light {
+            color: #a10909;
+            background-color: #e08585;
+            border-color: #f7d8d8;
+        }
+
+        .notifi-active-color{
+            background-color: #dddddd;
+        }

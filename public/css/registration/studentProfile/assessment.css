@@ -1,0 +1,7 @@
+.Assessment_Deatils_Table{
+    height: 300px;
+}
+
+.Assessment_Deatils_Table th,.Assessment_Deatils_Table td{
+    border: 2px solid #434343;
+}

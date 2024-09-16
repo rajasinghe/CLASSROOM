@@ -1,0 +1,20 @@
+#summary-section{
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+#report-nav button,#report-nav button{
+    color: rgb(212, 139, 3);
+    border-color: rgb(212, 139, 3);
+}
+
+#report-nav button.active,#report-nav button.active{
+    background-color: rgb(231, 158, 21);
+    color: white;
+}
+
+/* Report section styles */
+#table-section{
+    overflow-y: auto;
+    max-height: 325px;
+}

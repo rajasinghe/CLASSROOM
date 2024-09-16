@@ -1,0 +1,158 @@
+.shortcut{
+    text-decoration: none;
+    color: aliceblue;
+    cursor: pointer;
+    height: 140px;
+    position: relative;
+    transition: color 0.4s ease;
+}
+
+.shortcut::before{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.15),rgba(255, 255, 255, 0.05),transparent);
+    transition: all 0.4s ease;
+}
+
+.shortcut *{
+    z-index: 10;
+}
+
+.shortcut:hover{
+    color: rgb(0, 0, 0);
+}
+
+.shortcut:hover::before{
+    width: 100%;
+}
+
+.shortcut.red{
+    background-color: rgb(233, 62, 62);
+}
+
+.shortcut.green{
+    background-color: rgb(40, 161, 91);
+}
+
+.shortcut.blue{
+    background-color: rgb(65, 88, 189);
+}
+
+.shortcut.yellow{
+    background-color: rgb(212, 152, 61);
+}
+
+/* .shortcut.c-a{
+    background-image: 
+    linear-gradient(to right,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url(/public/images/assessment-home.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.shortcut.i-b{
+    background-image: url(/public/images/inventory-home.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.shortcut.m-a{
+    background-image: url(/public/images/attendance-home.jpg);
+    background-size: cover;
+    background-position: center;
+} */
+
+.status {
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+.status:before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
+.status.active {
+    color: #0aa712;
+    background-color: rgba(43, 169, 114, 0.329);
+}
+
+.status.active:before {
+    background-color: #0ca713;
+}
+
+.status.disabled {
+    color: #b13f3f;
+    background-color: rgba(214, 34, 21, 0.2);
+}
+
+.status.disabled:before {
+    background-color: #bd3232;
+}
+
+.table-responsive{
+    overflow-y: auto;
+}
+
+#attendance-section{
+    max-height: 200px;
+}
+
+#student-section{
+    max-height: 265px;
+}
+
+#student-table tr *{
+    cursor: default;
+}
+
+#student-table tbody tr:hover *{
+    background-color: #647daa;
+}
+
+#student-table tbody tr:hover .status.active{
+    color: #9ef8a3;
+    background-color: rgba(25, 184, 115, 0.767);
+}
+
+#student-table tbody tr:hover .status.active:before{
+    background-color: rgb(105, 255, 190);
+}
+
+#student-table tbody tr:hover .status.disabled{
+    color: #f89e9e;
+    background-color: rgba(184, 25, 25, 0.767);
+}
+
+#student-table tbody tr:hover .status.disabled:before{
+    background-color: rgb(255, 105, 105);
+}
+
+#student-table tbody tr:hover td{
+    color: white;
+}
+
+.student-img{
+    width: 40px;
+}
+
+.notifications{
+    max-height: 200px;
+    overflow-x: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .notifications{
+        max-height: 264px;
+        overflow-x: auto;
+    }
+}

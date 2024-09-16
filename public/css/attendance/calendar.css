@@ -1,0 +1,125 @@
+.calendar ul {
+    list-style-type: none;
+  }
+
+  /* Month header */
+  .month {
+    width: 100%;
+    background: #ffffff;
+  }
+
+  /* Month list */
+  .month ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .month ul li {
+    color: rgb(0, 0, 0);
+    letter-spacing: 3px;
+    text-align: center;
+  }
+
+  .month ul .nav{
+      background-color: rgb(255, 255, 255);
+      color: black;
+      padding: 5px 15px;
+      border-radius: 5px;
+      box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.438);
+      cursor:pointer;
+  }
+
+  .calendar-title{
+    font-size: 19px;
+    font-weight: 600;
+  }
+
+  .calendar-body{
+    padding-bottom: 1px;
+  }
+
+  .calendar-body .body-head{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    justify-items: center;
+    padding: 0;
+  }
+
+  .calendar-body .body-body{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    justify-items: center;
+    align-items: center;
+    row-gap: 0.8rem;
+    padding: 0.8rem 0;
+  }
+
+  .calendar-body .body-body li:nth-child(7n+7),.calendar-body .body-body li:nth-child(7n+6){
+    color: #e95e54;
+  }
+
+  .calendar-body .legend{
+    list-style-type: none;
+    display: flex;
+    border: 1px solid rgb(153, 153, 153);
+    border-radius: 5px;
+    padding: 0;
+    align-items: start;
+  }
+
+  .calendar-body .legend li{
+    display: flex;
+    align-items: center;
+  }
+
+  .calendar-body .legend li span{
+    width: 15px;
+    height: 15px;
+  }
+
+  /* Highlight the "current" day */
+  .body-head li{
+    padding: 5px 18px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: rgb(124, 124, 124);
+  }
+
+  .body-body li{
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-weight: 680;
+    cursor: pointer;
+  }
+
+  .body-body li:hover{
+    background-color: rgba(196, 196, 196, 0.548);
+
+  }
+
+  .body-body li.selected{
+    background: #999999;
+  }
+
+  .body-body li.today {
+    background: #1a9cbc;
+    color: white !important;
+    padding: 5px 10px !important;
+  }
+
+  .body-body li.holiday{
+    border: 1.5px solid #f0493d;
+    padding: 5px 8px !important;
+  }
+  @media screen and (max-width:576px) {
+    .calendar .body-head li{
+      padding: 0 !important;
+    }
+
+    .calendar .body-body li{
+      padding: 0;
+    }
+  }

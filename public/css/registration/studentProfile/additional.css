@@ -1,0 +1,22 @@
+.tableREs {
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+
+.tableREs thead {
+    position: sticky;
+    top: 0;
+}
+
+.tableREs table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tableREs table th,
+.tableREs table td {
+    padding: 8px 15px;
+    border: 2px solid #434343;
+    text-align: center;
+}

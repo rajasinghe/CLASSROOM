@@ -1,0 +1,34 @@
+@media screen and (max-width:576px) {
+    #annual-chart-container {
+        overflow-x: auto;
+    }
+
+    #annual-chart {
+        width: 450px;
+    }
+
+    #annual-chart tbody th,
+    #annual-chart tbody .data {
+        font-size: 12px;
+    }
+
+}
+
+.good {
+    color: red;
+}
+
+.Anunal_Percentage {
+    font-weight: bold;
+}
+
+.attence_deatils_img {
+    width: 230px;
+}
+
+.attence_deatils_border {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,142 @@
+.repeat-row .repeat-row-batch {
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out;
+    /* Hide the button by default */
+}
+
+.repeat-row .repeat-row-batch .btn {
+    height: 30px;
+    width: 30px;
+    border: solid;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+.repeat-row .repeat-row-batch .btn img {
+    width: 25px;
+    height: 25px;
+
+}
+
+.search-input {
+    padding-right: 45px;
+}
+
+.filter-icon {
+    position: relative;
+    right: 50px;
+    border: 0;
+}
+
+.filter-icon img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.filter-icon:hover .floating-filter-options{
+    opacity: 100;
+    display: block;
+}
+.repeat-row:hover .repeat-row-batch {
+    opacity: 100;
+    /* Show the button on hover */
+}
+
+.active-filter {
+   
+    background: #b62424;
+    background-color: #b62424;
+}
+
+.floating-filter-options{
+    background-color: #515252;
+    opacity: 0;
+    color: white;
+    border-radius: 5px;
+    padding: 8px;
+    position: absolute;
+    top: 0px;
+    right: -85%;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.floating-filter-options div:hover {
+    border-radius: 5px;
+    background: #b62424;
+    background-color: #b62424;
+}
+
+.repeat-row:hover .add-img{
+    animation: growIcon 1.5s linear infinite;
+    /* Show the button on hover */
+}
+
+
+
+
+@keyframes growIcon {
+    /* 0% {
+        transform: rotate3d(1, 1, 1, 0deg);
+    }
+
+    50% {
+        transform: rotate3d(1, 1, 1, 180deg);
+    }
+
+    100% {
+        transform: rotate3d(1, 1, 1, 360deg);
+    } */
+    0% {
+        transform: scale(0.9); /* Start rotation from 0 degrees */
+      }
+      50%{
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(0.9); /* Rotate to 360 degrees */
+      }
+}
+
+
+
+.loader{
+    transition: opacity 1s ease;
+    border:16px solid lightgray;
+    border-top:16px solid #b62424;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: spin linear 2s infinite;
+}
+
+.loader1{
+    background: transparent;
+    border: 5px solid lightgray;
+    border-top:5px solid white;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    animation: spin linear 2s infinite;
+}
+@keyframes spin{
+    0%{
+        transform:rotate(0deg)
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+
+.add-icon img{
+    height: 30px;
+    width: 30px;
+}
+.add-icon img:hover{
+    animation: growIcon 2s ease-in-out infinite;
+}
+
+

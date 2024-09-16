@@ -1,0 +1,110 @@
+.assessment-bar{
+    --progress: unset;
+    max-width: 90px;
+    height: calc(var(--progress) * 2.5px);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.assessment-bar span{
+    font-weight: 600;
+    margin-top: 20px;
+    z-index: 2;
+}
+
+.assessment-bar::after{
+    content: '';
+    position: absolute;
+    background-color: rgb(83, 252, 139);
+    width: 100%;
+    height: 100%;
+    bottom: 0%;
+    left: 0%;
+    z-index: 1;
+    animation: showProgress 1s;
+}
+
+.assessment-labels li{
+    list-style-type: none;
+}
+
+.assessment-labels li span{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: aqua;
+}
+
+#assessment-mark-section{
+    overflow-y: auto;
+    max-height: 380px;
+}
+
+#assessment-summary-section{
+    overflow-y: auto;
+    max-height: 282px;
+}
+
+#assessment-mark-table tr th{
+    cursor: default;
+}
+
+.floating #assessment-summary-section{
+    max-height: 380px;
+}
+
+#assessment-summary-table thead tr th{
+    font-size: 14px;
+}
+
+#assessment-summary-table tbody tr td{
+    font-size: 14px;
+}
+
+#assessment-nav button,#report-nav button{
+    color: rgb(212, 139, 3);
+    border-color: rgb(212, 139, 3);
+}
+
+#assessment-nav button.active,#report-nav button.active{
+    background-color: rgb(231, 158, 21);
+    color: white;
+}
+
+#report-table-container table th,#report-table-container table td{
+    font-size: 13px;
+}
+
+#batchField{
+    padding-top:2px !important;
+    padding-bottom:2px !important;
+}
+
+.c-date{
+    width: 1%;
+    white-space: nowrap;
+}
+
+.tooltip-element::after{
+    content: "";
+    opacity: 0;
+    transition-property: opacity;
+    transition-delay: 0.5s;
+}
+
+.tooltip-element:hover::after{
+    opacity: 1;
+    font-weight: normal;
+    background: rgb(212, 221, 224);
+    color: rgb(14, 13, 13);
+    padding: 2px 10px;
+}
+
+@keyframes showProgress {
+    0%{ height: 0%; background-color: rgb(238, 9, 9);}
+    25%{background-color: rgb(255, 136, 0);}
+    75%{background-color: rgb(192, 226, 43);}
+    100%{ height: 100%;}
+}

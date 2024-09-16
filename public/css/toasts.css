@@ -1,0 +1,39 @@
+.toast {
+    height: auto;
+}
+
+.toast.success .toast-side-bar {
+    background-color: rgb(32, 119, 66);
+}
+
+
+.toast .toast-side-bar {
+    width: 25px;
+    min-height: 50px;
+    height: 100%;
+}
+
+.toast.failure .toast-side-bar {
+    background-color: rgb(206, 11, 5);
+}
+
+.toast-container {
+    top: 20%;
+    position: fixed !important;
+}
+
+/* Tooltip styles */
+.tooltip-element {
+    position: relative;
+}
+
+.tooltip-element:hover:after {
+    content: attr(data-message);
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    width: fit-content;
+    background: rgb(199, 224, 233);
+    color: rgb(14, 13, 13);
+    z-index: 2;
+}
