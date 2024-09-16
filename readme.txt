@@ -1,3 +1,8 @@
+# CLassroom Management System
+CMS - CLassroom management system VTA is a center management system aimed at digitalizing all information management of all centers owned by the Vocaitonal Training Authority of Sri Lanka.
+
+This is the official repository of the CMS - VTA project.
+
 !!!! IMPORTANT
 
 -----ROUTE CACHING-------
